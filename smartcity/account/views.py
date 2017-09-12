@@ -1,13 +1,18 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse
-from account.forms import RegistrationForm, EditProfileForm
+from account.forms import (
+    RegistrationForm,
+    EditProfileForm,
+)
 
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserChangeForm
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
+from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth.decorators import login_required
 
 
 def register(request):
-    if request.method =='POST':
+    if request.method == 'POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
@@ -17,7 +22,6 @@ def register(request):
 
         args = {'form': form}
         return render(request, 'account/register_form.html', args)
-
 
 def view_profile(request, pk=None):
     if pk:
@@ -39,3 +43,19 @@ def edit_profile(request):
         form = EditProfileForm(instance=request.user)
         args = {'form': form}
         return render(request, 'account/edit_profile.html', args)
+
+
+def edit_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(data=request.POST, user=request.user)
+
+        if form.is_valid():
+            form.save()
+            update_session_auth_hash(request, form.user)
+            return redirect(reverse('account:view_profile'))
+        else:
+            return redirect('/account/edit_password')
+    else:
+        form = PasswordChangeForm(user=request.user)
+        args = {'form': form}
+        return render(request, 'account/edit_password.html', args)

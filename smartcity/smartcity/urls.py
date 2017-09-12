@@ -17,8 +17,8 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from smartcity import views
 
-urlpatterns = [
+urlpatterns = (
     url(r'^$', views.login_redirect, name='login_redirect'),
     url(r'^admin/', admin.site.urls),
     url(r'^account/', include('account.urls')),
-]
+)
