@@ -3,18 +3,28 @@ from django.contrib.auth.models import User
 from django.db.models.signals import post_save
 
 options = [
-    ('0', 'Student'),
-    ('1', 'Tourist'),
-    ('2', 'Business'),
-    ('3', 'Admin'),
+    ('Student', 'Student'),
+    ('Tourist', 'Tourist'),
+    ('Business', 'Business'),
+    ('Admin', 'Admin'),
 ]
+
+
+class UserProfileManager(models.Manager):
+    def get_queryset(self):
+        return super(UserProfileManager, self).get_queryset().filter(type='Admin')
 
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User)
-    email = models.CharField(max_length=100, blank=True)
+    first_name = models.CharField(max_length=100, default='')
+    last_name = models.CharField(max_length=100, default='')
+    email = models.CharField(max_length=100)
     phone = models.IntegerField(default=0)
-    type = models.CharField(max_length=1, choices=options)
+    image = models.ImageField(upload_to='image_profile', blank=True)
+    type = models.CharField(max_length=8, choices=options)
+
+    admin = UserProfileManager()
 
     def __str__(self):
         return str(self.user)

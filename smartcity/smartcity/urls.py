@@ -16,9 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from smartcity import views
+from django.conf import settings
+from django.conf.urls.static import static
 
-urlpatterns = (
+urlpatterns = [
     url(r'^$', views.login_redirect, name='login_redirect'),
     url(r'^admin/', admin.site.urls),
-    url(r'^account/', include('account.urls')),
-)
+    url(r'^account/', include('account.urls', namespace='account')),
+    url(r'^city/', include('city.urls', namespace='city')),
+    ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
