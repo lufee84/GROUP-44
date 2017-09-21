@@ -5,6 +5,19 @@
     {% endblock %}
 
 {% block body %}
+    <div class="container">
+    {% if messages %}
+    <ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+
+
+
+
+
 <div class="container">
     <h1>Profile</h1>
     <p>Username: {{ user }}</p>
@@ -12,8 +25,10 @@
     <p>Last name: {{ user.last_name }}</p>
     <p>Email: {{ user.email }}</p>
     <p>Phone: {{ user.userprofile.phone }}</p>
-    <p>User type: {{  user.userprofile.type }}</p>
+    <p>User type: {{  user.userprofile.role }}</p>
+    {% if user.userprofile.image %}
     <img src="{{ user.userprofile.image.url }}" width="240">
+    {% endif %}
 
 </div>
 

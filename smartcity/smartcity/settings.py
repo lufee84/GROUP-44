@@ -126,7 +126,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'smartcity/media')
 
-LOGIN_REDIRECT_URL = '/account/'
+LOGIN_REDIRECT_URL = '/city/'
 
 LOGIN_URL = '/account/login/'
 
