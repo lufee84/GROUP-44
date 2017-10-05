@@ -5,8 +5,13 @@ from django.contrib.auth.models import User
 from city.forms import HomeForm
 from city.models import Post
 
-class HomeView(TemplateView):
-    template_name = 'home/home.html'
+
+class HomePageView(TemplateView):
+    template_name = "home/home.html"
+
+
+class FeedbackView(TemplateView):
+    template_name = 'home/feedback.html'
 
     def get(self, request):
         form = HomeForm()
@@ -24,8 +29,7 @@ class HomeView(TemplateView):
             post.save()
             text = form.cleaned_data['post']
             form = HomeForm()
-            return redirect('city:home')
+            return redirect('city:feedback')
 
         args = {'form': form, 'text': text}
         return render(request, self.template_name, args)
-

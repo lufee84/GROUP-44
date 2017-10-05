@@ -1,35 +1,49 @@
 {% extends 'base.html' %}
-
+{% load staticfiles %}
 {% block body %}
 
 
-    <div class="container">
+<div class="w3-container w3-padding-32 w3-theme-d1">
+  <h1>WELCOME TO SMART CITY</h1>
+</div>
 
-        <div class="col-md-8">
-            <h2>MAIN PAGE</h2>
-        <form method="post">
-            {% csrf_token %}
-            {{ form.post }}
-            <br>
-            <button type="submit">Submit</button>
-        </form>
+<div class="w3-row-padding w3-theme">
 
-        <h2>{{ text }} </h2>
-     {% for post in posts %}
-        <h1>{{ post.post }}</h1>
-         <p>Posted by {{ post.user.get_full_name }} on {{ post.created }}</p>
-    {% endfor %}
-        </div>
-    <div class="col-md-4">
-        <h2>Other Information</h2>
-        {% for user in users %}
-        <a href={% url 'account:view_profile_with_pk' pk=user.pk %}>
-            <h3>{{ user.username }}</h3>
-        </a>
-    {% endfor %}
+<div class="w3-third w3-section">
+<div class="w3-card-4">
+<img src="{% static 'images/school.jpg' %}" class="w3-hover-opacity" style="width:100%">
 
-    </div>
+<div class="w3-container w3-white">
+<h4>SCHOOL</h4>
+<p>Find everything that you would like for the school.</p>
+</div>
+</div>
+</div>
 
-    </div>
+<div class="w3-third w3-section">
+<div class="w3-card-4">
+<img src="{% static 'images/business.jpg' %}" class="w3-hover-opacity" style="width:100%">
+<div class="w3-container w3-white">
+<h4>BUSINESS</h4>
+<p>Let us help you find the right industires for you.</p>
+</div>
+</div>
+</div>
+
+<div class="w3-third w3-section">
+<div class="w3-card-4">
+<img src="{% static 'images/tourist.jpg' %}" class="w3-hover-opacity" style="width:100%">
+<div class="w3-container w3-white">
+<h4>TOURIST</h4>
+<p>Lets enjoy what the city has to offer.
+</div>
+</div>
+<br><br><br>
+</div>
+</div>
+<div class="w3-container w3-theme-d4">
+<p class="w3-large">Smarty City Co.</p>
+</div>
+
 
 {% endblock %}
