@@ -10,23 +10,28 @@ from django.dispatch import receiver
 
 
 class UserProfile(models.Model):
-    STUDENT = 1
-    TOURIST = 2
-    BUSINESS = 3
-    ADMIN = 4
+
+    business = 'Business'
+    student = 'Student'
+    tourist = 'Tourist'
+    admin = 'ADMIN'
+
     ROLE_CHOICES = (
-        (STUDENT, 'Student'),
-        (TOURIST, 'Tourist'),
-        (BUSINESS, 'Business'),
-        (ADMIN, 'Admin'),
+        (business, 'Business'),
+        (student, 'Student'),
+        (tourist, 'Tourist'),
+        (admin, 'ADMIN')
     )
+
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    first_name = models.CharField(max_length=100, default='')
-    last_name = models.CharField(max_length=100, default='')
     email = models.EmailField()
     phone = models.IntegerField(default=0)
     image = models.ImageField(upload_to='image_profile', blank=True)
-    role = models.PositiveSmallIntegerField(choices=ROLE_CHOICES, null=True, blank=True)
+    role = models.CharField(
+        max_length=8,
+        choices=ROLE_CHOICES,
+        default=business,
+        )
 
     # admin = UserProfileManager()
 

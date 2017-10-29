@@ -11,7 +11,6 @@ ROLES = ((0, 'Student'), (1, 'Tourist'), (2, 'Business'))
 
 class RegistrationForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    # role = forms.ChoiceField(choices=ROLES)
 
     class Meta:
         model = User
@@ -28,7 +27,6 @@ class RegistrationForm(UserCreationForm):
         user = super(RegistrationForm, self).save(commit=False)
         user.first_name = self.cleaned_data['first_name']
         user.last_name = self.cleaned_data['last_name']
-        user.role = self.cleaned_data['role']
         user.email = self.cleaned_data['email']
 
         if commit:

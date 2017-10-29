@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 
     {% block head%}
-    <title>Profile</title>
+    <title>Edit Profile - SMART CITY</title>
     {% endblock %}
 
+
+
 {% block body %}
-<div class="container">
+
+<div class="w3-container w3-padding-32 w3-theme-d1">
+<div class="w3-container w3-text-black">
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
@@ -14,6 +18,10 @@
         <br>
 
 </div>
+
+</div>
+
+
 
 
 

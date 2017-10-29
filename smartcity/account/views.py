@@ -12,16 +12,17 @@ from django.contrib.auth import update_session_auth_hash
 
 
 def register(request):
-    if request.method == 'POST':
+    if request.method =='POST':
         form = RegistrationForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, 'Your account has been created!')
             return redirect(reverse('city:home'))
+        else: return render(request, 'account/register_form.html', {'form': form})
+
     else:
         form = RegistrationForm()
-
         args = {'form': form}
+        messages.success(request, 'Your account has been created!')
         return render(request, 'account/register_form.html', args)
 
 
