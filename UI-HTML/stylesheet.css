@@ -3,7 +3,10 @@
 
 /* Header */
 .navigation ul li a{text-decoration:none;}
-body {min-width: 600px;}
+body {
+	min-width: 600px;
+	background-color: #FFE4B5;
+}
 header,nav,article,section,footer{display:block;}}
 .clear{clear:both;}
 h4{font: gray;}
