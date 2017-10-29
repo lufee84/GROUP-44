@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<title>Businessman searching main page</title>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      picdiv {
+        background-color : #EEE;
+
+        height : 200px;
+        width : 200px;
+
+        text-align : center;
+
+        /* Firefox, Chrome */
+        line-height : 200px;
+
+        /* IE */
+        *font-size : 180px;  /* 200px * 0.9 = 180px */
+        *font-family : Arial;
+      }
+
+      picdiv img {
+        vertical-align : middle;
+      }
+    </style>
+<head>
+<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<script language="javascript">
+function ChangeDisabled(value){
+	if(value=='true'){
+		document.getElementById('TetstText').disabled=false;
+	}else{
+		document.getElementById('TetstText').disabled=true;
+　}
+}
+</script>
+</head>
+<body>
+<div class= 'header'>
+			<div class= 'titleDiv'>
+				<!--<img src = "characters.jpg" alt="" class= "logo"/>-->
+					<h1> Smart City	</h1>
+			</div>
+			<div class ="navigation">
+
+			</div>
+			<code>
+			 <div id="cssmenu">
+			  <ul>
+			   <li class="active">
+			    <a href="homepage.html">Homepage</a>
+				 </li>
+				 <li>
+  				<a href="#">Profile</a>
+  			 </li>
+				 <!--<li class="has-sub">
+ 					<a href="buyproducts.html">
+ 						Products
+ 					</a>
+ 					<ul>
+ 						<li class="has-sub">
+ 							<a href="buyproducts1.html">
+ 							Games relative
+ 							</a>
+ 							<ul>
+ 								<li>
+ 									<a href="buyproducts1-1.html">A-M</a>
+ 								</li>
+ 								<li>
+ 									<a href="buyproducts1-2.html">N-Z</a>
+ 								</li>
+ 							</ul>
+ 						</li>
+ 						<li class="has-sub">
+ 							<a href="buyproducts2.html">
+ 								Merchandise
+ 							</a>
+ 							<ul>
+ 								<li>
+ 									<a href="buyproducts2-1.html">T-Shirt</a>
+ 								</li>
+ 								<li>
+ 									<a href="buyproducts2-2.html">Others</a>
+ 								</li>
+ 							</ul>
+ 						</li>
+ 					</ul>
+ 				</li>-->
+ 				<li>
+ 					<a href="Transport page.html">Search Page</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">Log out</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">About</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">Contact</a>
+ 				</li>
+ 				</ul>
+			 </div>
+			</code>
+</div>
+<!--
+<br>
+<br>
+<br>-->
+<iframe height="200px" width="100%" frameBorder="0" scrolling="no"
+  src="https://developers.google.com/maps/documentation/javascript/examples/full/map-geolocation?hl=zh-tw" allowfullscreen>
+</iframe>
+<fieldset style="color:blue;margin-left: 40px;">
+  <select class="" name="">
+    <option value="motel">Motel</option>
+    <option value="plaza">Plaza</option>
+    <option value="bank">Bank</option>
+    <option value="park">Parks</option>
+    <option value="hospital">Hospital</option>
+    <option value="zoo">Zoo</option>
+    <option value="rental">Car Rental</option>
+  </select>
+	<br>
+  <div id="map"></div>
+      <script>
+        // Note: This example requires that you consent to location sharing when
+        // prompted by your browser. If you see the error "The Geolocation service
+        // failed.", it means you probably did not give permission for the browser to
+        // locate you.
+
+        function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            center: {lat: -34.397, lng: 150.644},
+            zoom: 6
+          });
+          var infoWindow = new google.maps.InfoWindow({map: map});
+
+          // Try HTML5 geolocation.
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+              var pos = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+              };
+
+              infoWindow.setPosition(pos);
+              infoWindow.setContent('Location found.');
+              map.setCenter(pos);
+            }, function() {
+              handleLocationError(true, infoWindow, map.getCenter());
+            });
+          } else {
+            // Browser doesn't support Geolocation
+            handleLocationError(false, infoWindow, map.getCenter());
+          }
+        }
+
+        function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+          infoWindow.setPosition(pos);
+          infoWindow.setContent(browserHasGeolocation ?
+                                'Error: The Geolocation service failed.' :
+                                'Error: Your browser doesn\'t support geolocation.');
+        }
+      </script>
+      <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+      </script>
+
+      <h1 style="display:block; margin:auto;" align="center">Welcome to: Brisbane</h1>
+    <picdiv><a href="http://www.visitbrisbane.com.au/"><img src="image.adapt.1663.medium.jpg" align="center" style="display:block; margin:auto;"></a><!--width="172.5" height="207"--></picdiv>
+
+</fieldset>
+</body>
+<footer class="page_footer">
+ <img src = "characters.jpg" alt="" class= "logo"/>
+  <h1> Smart City	</h1>
+		  &copy; SMCity.com
+</footer>
+<html>
