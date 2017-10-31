@@ -45,6 +45,19 @@ function ChangeDisabled(value){
 		document.getElementById('TetstText').disabled=true;
 　}
 }
+if (choice.value == "motel"){
+	document.location.href="Businessman_motel.html";
+}else if(choice.value == "bank"){
+	document.location.href="Businessman_bank.html";
+}else if(choice.value == "hospital"){
+	document.location.href="Businessman_hospital.html";
+}else if(choice.value == "plaza"){
+	document.location.href="Businessman_plaza.html";
+}else if(choice.value == "zoo"){
+	document.location.href="Businessman_zoo.html";
+}else if(choice.value == "rental"){
+	document.location.href="Businessman_carRental.html";
+}
 </script>
 </head>
 <body>
@@ -122,7 +135,7 @@ function ChangeDisabled(value){
   src="https://developers.google.com/maps/documentation/javascript/examples/full/map-geolocation?hl=zh-tw" allowfullscreen>
 </iframe>
 <fieldset style="color:blue;margin-left: 40px;">
-  <select class="" name="">
+  <select class="" name="" id="choice">
     <option value="motel">Motel</option>
     <option value="plaza">Plaza</option>
     <option value="bank">Bank</option>
@@ -131,6 +144,21 @@ function ChangeDisabled(value){
     <option value="zoo">Zoo</option>
     <option value="rental">Car Rental</option>
   </select>
+<script>
+	if (choice.value == "motel"){
+	document.location.href="Businessman_motel.html";
+}else if(choice.value == "bank"){
+	document.location.href="Businessman_bank.html";
+}else if(choice.value == "hospital"){
+	document.location.href="Businessman_hospital.html";
+}else if(choice.value == "plaza"){
+	document.location.href="Businessman_plaza.html";
+}else if(choice.value == "zoo"){
+	document.location.href="Businessman_zoo.html";
+}else if(choice.value == "rental"){
+	document.location.href="Businessman_carRental.html";
+}
+	</script>
 	<br>
   <div id="map"></div>
       <script>
