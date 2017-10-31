@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<title>Insurence</title>
+<head>
+<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<script language="javascript">
+function ChangeDisabled(value){
+	if(value=='true'){
+		document.getElementById('TetstText').disabled=false;
+	}else{
+		document.getElementById('TetstText').disabled=true;
+　}
+}
+</script>
+<style type="text/css">
+#sitebody{
+　width:600px;
+　margin:0 auto;
+　font-size:13px;
+}
+#header{
+　background-color:#FFD4D4;
+　height:80px;
+　text-align:center;
+　line-height:80px;
+}
+#sidebar_left{
+　background-color:#FFECC9;
+　width:120px;
+　height:400px;
+　text-align:center;
+　line-height:400px;
+　float:left;
+}
+#sidebar_right{
+　background-color:#FFECC9;
+　width:120px;
+　height:400px;
+　text-align:center;
+　line-height:400px;
+　float:right;
+}
+#content{
+　margin-left:120px;
+　margin-right:120px;
+　height:400px;
+　background-color:#F2FFF2;
+　text-align:center;
+　line-height:400px;
+}
+#footer{
+　clear:both;
+　background-color:#FFD4D4;
+　height:80px;
+　text-align:center;
+　line-height:80px;
+}
+.icon {
+    display: inline-block;
+    width: 300px; height: 300px;
+    overflow: hidden;
+}
+.icon-del {
+    background: url(pictures/220.png) no-repeat center;
+}
+.icon > .icon {
+    position: relative;
+    left: -325px;
+    border-right: 300px solid transparent;
+    -webkit-filter: drop-shadow(300px 0 green);
+    filter: drop-shadow(300px 0 green);
+}
+</style>
+</head>
+<body>
+<div class= 'header'>
+			<div class= 'titleDiv'>
+					<h1> Smart City	</h1>
+			</div>
+			<div class ="navigation">
+			</div>
+			<code>
+			 <div id="cssmenu">
+			  <ul>
+			   <li class="active">
+			    <a href="homepage.html">Homepage</a>
+				 </li>
+				  <li>
+  				<a href="#">Profile</a>
+  			 </li>
+				 <li class="has-sub">
+ 					<a href="buyproducts.html">
+ 						Accommodation
+ 					</a>
+ 					<ul>
+ 							<a href="#">
+ 							Buget rooms
+ 							</a>
+ 							<a href="#">
+ 								Shared rooms
+ 							</a>
+						<a href="#">
+							Ensuite
+						</a>
+ 					</ul>
+ 				</li>
+ 				<li>
+ 					<a href="Transport page.html">Search Page</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">Log out</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">About</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">Contact</a>
+ 				</li>
+ 				</ul>
+			 </div>
+			</code>
+</div>
+<!--<fieldset style="color:blue;margin-left: 40px;">
+	 Accommodation:<select name="q1" value="" class="Bolder" placeholder="Accommodation">
+		<option value="bugetRooms" class="Bolder">Accommodation</option>
+		<option value="bugetRooms" class="Bolder">Buget rooms</option>
+		<option value="sharedRooms" class="Bolder">Shared rooms</option>
+		<option value="ensuite" class="Bolder">Ensuite</option>
+	 </select>
+	 Transport:<select name="q2" value="" class="Bolder" placeholder="Transport">
+		<option value="bugetRooms" class="Bolder">Transport</option>
+		<option value="bugetRooms" class="Bolder">Train</option>
+		<option value="sharedRooms" class="Bolder">Car</option>
+		<option value="ensuite" class="Bolder">Walk</option>
+	 </select>
+	 Shops and Malls:<select name="q3" value="" class="Bolder" placeholder="Shops and Malls">
+		<option value="bugetRooms" class="Bolder">Shops and Malls</option>
+		<option value="bugetRooms" class="Bolder">Shops</option>
+		<option value="sharedRooms" class="Bolder">Malls</option>
+		<option value="ensuite" class="Bolder">Market</option>
+	 </select>
+	 Insurance and help:<select name="q4" value="" class="Bolder" placeholder="Insurance and help">
+		<option value="bugetRooms" class="Bolder">Insurance and help</option>
+		<option value="bugetRooms" class="Bolder">Insurance</option>
+		<option value="sharedRooms" class="Bolder">Help</option>
+		<option value="ensuite" class="Bolder">Others</option>
+	 </select>
+	 <input type="search" name="" value="" placeholder="search">
+	 <input type="submit" name="" value="submit">
+	 <br>
+</fieldset>-->
+<br>
+
+<fieldset style="color:blue;margin-left: 40px;">
+	<table>
+		 <tr>
+			<td>
+				<table style="color: green;">
+					<tr>
+						<td>
+							<!--<a href="http://ahmoshc.com/english.aspx">-->
+							<img src="pictures/25be348d67668041dff6316c0ef293e1.png" alt="" width="220" height="143"><!--</a>--></td><!--width="200" height="125"-->
+						<td><p><h3>We care for your health so...</h3>
+							First and foremost, client-focused care. Client safety, independence and confidentiality are our top priorities. We’re entirely focused on your needs, whether they involve us for a few hours a week or on an around-the-clock basis.
+							A daily health checklist is an excellent way to take baby steps to manage your health. Start with drinking water, eating your fruits and veggies with every meal, working out at least 30 minutes, stretching, laughing (or at least smile!), and try to sleep for eight hours.
+							Well, but any way, buy the insurance.</p></td>
+					</tr>
+					<tr>
+						<td>
+							<!--<a href="https://www.medibank.com.au/health-insurance/?gclid=Cj0KCQjwvuDPBRDnARIsAGhuAmbayg_bpHdw2urk-5aroDZOG0v4U-WEgv2c2d1dBxXeHManIr8zAxwaAqKWEALw_wcB&gclsrc=aw.ds">-->
+								<img src="pictures/ok-1976099_960_720.png" alt="" width="240" height="240"><!--</a>--></td><!-- width="200" height="200"-->
+						<td><p><h3>How do we manage your worries</h3>
+						Worrying is normally a very inefficient attempt to problem-solve. So when you worry, try to turn this into useful problem solving by considering what you need to do now to deal with the problem.
+						Don’t waste time thinking up situations that ‘might’ happen, but in reality are quite unlikely to happen – that is just a misuse of good brain time! Try to spot when you start asking yourself “What if…?” type questions. The vast majority of the scenarios you create using this approach are never likely to happen – so why waste time thinking about them? Have a look at how to handle “What if…?”
+						Don’t be fooled into thinking that your worry will always be helpful. If you are a persistent worrier you’ve probably come to use worrying simply to kid yourself that you’re doing ‘something’ about a problem. This is not an alternative to tackling the problem now in practical ways.
+						And the best way, buy the insurances</p></td>
+					</tr>
+					<tr>
+						<td><!--<a href="https://www.allianz.com.au/">-->
+							<!--<img src="pictures/220.png" alt="" >--><!--</a>-->
+							<i class="icon"><i class="icon icon-del"></i></i>
+						</td><!--width="246" height="160"-->
+						<td><p><h3>Precision and the assurance</h3>
+							True story. Every job we produce is personally inspected repeatedly at every level of production and distribution.
+							Quality is one thing. But consistent quality is something entirely different.
+							For instance, when we do a production run, we'll reference samples from your previous jobs - samples we've set aside specifically in order to verify that everything remains consistent from your first job to the last.
+							But in the end, just buy the insurances</p></td>
+					</tr>
+				</table>
+			</td>
+			<td style="text-align:center;"  width="100">
+				<a href="https://en.wikipedia.org/wiki/Insurance" style="text-align:center;">All you need to know</a>
+				<fieldset style="text-align:center; color:black;">
+					Insurance is a means of protection from financial loss. It is a form of risk management primarily used to hedge against the risk of a contingent, uncertain loss.
+					An entity which provides insurance is known as an insurer, insurance company, or insurance carrier. A person or entity who buys insurance is known as an insured or policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and must involve something in which the insured has an insurable interest established by ownership, possession, or preexisting relationship.
+					The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insured will be financially compensated. The amount of money charged by the insurer to the insured for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster.
+					<br><br><img src="pictures/330621433db678c1e2f27f400b7eecc7.png" alt="" style="text-align:center;" width="308" height="229"><!--width="130" height="130"-->
+				</fieldset>
+			</td>
+		 </tr>
+	</table>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" name="" value="next page→"　style="margin-left:500px" align="center">
+
+</fieldset>
+</body>
+<footer class="page_footer">
+ <img src = "characters.jpg" alt="" class= "logo"/>
+  <h1> Smart City	</h1>
+		  &copy; SMCity.com
+</footer>
+<html>
