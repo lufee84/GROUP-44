@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title><p><center><h2>SMART CIRY</h2></center></p></title>
+<meta charset="uft-8">
+<style>
+<script>
+$(document).ready(function(){
+  var mouseX, mouseY;
+  var ww = $( window ).width();
+  var wh = $( window ).height();
+  var traX, traY;
+  $(document).mousemove(function(e){
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+    traX = ((4 * mouseX) / 570) + 40;
+    traY = ((4 * mouseY) / 570) + 50;
+    console.log(traX);
+    $(".title").css({"background-position": traX + "%" + traY + "%"});
+  });
+});
+
+</script>
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: -webkit-linear-gradient(#ebece7, white);
+  background: linear-gradient(#ebece7, grey);
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 15%;
+}
+
+.container2 {
+  position: absolute;
+	 top: 230px;
+   padding-top: 10px;
+      padding-left: 580px;
+}
+
+.title {
+  font-weight: 500;
+  color: transparent;
+  font-size: 100px;
+  background: url("http://phandroid.s3.amazonaws.com/wp-content/uploads/2014/05/rainbow-nebula.jpg") repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  line-height: 90px;
+  letter-spacing: -8px;
+}
+
+.subtitle {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+
+
+.navBAR{margin:0 auto; width: 1080px; padding:180px; }
+.navBAR ul {padding:0px;}
+.navBAR ul li { float:left; margin:1px; position:relative; background-color:red; border-radius:5px; list-style-type:none;}
+.navBAR ul li a {text-decoration:none; color:white; padding:5px; font-weight:bolder; display:block; width: 180px; text-align:center;}
+.navBAR ul li ul{position: absolute; visibility:hidden;}
+.navBAR ul li:hover ul{visibility:visible;}
+.navBAR ul li a:hover ul{color: green;}
+.navBAR ul li:hover{background-color:blue;}
+div.navBAR{position absolute; top: 150px; right 90px; width: 1000px; height: 80; border: 8px solid #black;}
+
+div.right {
+    position: absolute;
+    top: 230px;
+    right: 30px;
+    width: 220px;
+    height: 500px;
+    border: 3px solid #16051D;
+	padding-left: 10px;
+	padding-top: 10px;
+	 background-color: #EAF4D9;
+}
+
+div.bridgesky {
+    position: absolute;
+    top: 230px;
+    right: 300px;
+    width: 950px;
+    height: 700px;
+    border: 3px solid #16051D;
+	
+}
+
+
+div.boat {
+    position: absolute;
+    top: 500px;
+    right: 50px;
+    width: 220px;
+    height: 500px;
+	
+	}
+	div.centerintro {
+    position: absolute;
+    top: 293px;
+    right: 320px;
+    width: 390px;
+    height: 290px;
+   border: 1px solid #16051D;
+	 background-color: #EAF4D9;
+	 padding-left: 10px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+</style>
+
+
+
+</head>
+
+<body bgcolor="grey" >
+
+
+<div class="bridgesky"><img src="bridgesky.jpg" alt="Go" style="width:500px;height:300px; padding: 60px 10px 50px 10px;"> </div>
+
+
+
+<div class="container">
+  <div class="title">SMART CITY</div>
+  <div class="subtitle"> WHERE JOURNEY BEGINS HERE </div>
+</div>
+
+
+  <div class="container2"><h2> Brisbane</h2> </div>
+
+
+<div class="navBAR">
+<ul>
+<li><a href= "#">Home</a> 
+  <ul>
+  <li><a href="#">Know about yourself</a></li>
+  <li><a href="#">Contact Us</a></li>
+  <li><a href="#">Council</a></li>
+
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><a href= "#">Cities</a> 
+  <ul>
+  <li><a href="#">Brisbane</a></li>
+  <li><a href="#">Melbourne</a></li>
+  <li><a href="#">Sydney</a></li>
+  
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><a href= "#">Transport</a> 
+  <ul>
+  <li><a href="#">Contact Us</a></li>
+  <li><a href="#">Know about yourself</a></li>
+
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><a href= "#">Commitee</a> 
+  <ul>
+  <li><a href="#">Contact Us</a></li>
+  <li><a href="#">Know about yourself</a></li>
+
+</ul>
+</li>
+</ul>
+
+<ul>
+<li><a href= "#">Entertainment</a> 
+  <ul>
+  <li><a href="#">Take a tour</a></li>
+  <li><a href="#">Night Life</a></li>
+
+</ul>
+</li>
+</ul>
+
+    <div class="right">Find an inspiring collection of places to explore in and around Brisbane. <br>From the natural pleasures of parklands to the urban appeal of art galleries - it's right here. Wining and Dining. Urban village hotspots. <br>Nights out on the town. Beds and boutique hotels, shopping and cinemas and everything in between.</div>
+		<div class="boat"><img src="boat.jpg" alt="Go" style="width:225px;height:200px; padding: 10px 30px 50px 10px;"></div>
+	
+	<div class = "centerintro">Off the watery path, Brisbane also has plenty of sights to marvel at. Catch one of the city’s numerous helicopter tours for a bird’s eye view of the CBD or the islands – depending on where you want to go. <br>The Kangaroo Point Cliffs are stunning for cityscape views – though you won't see any of our furry friends – otherwise try <a href="http://www.eaglestreetpier.com.au/">Eagle Street Pier</a> on the opposite bank.</br> The Story Bridge Adventure Climb is exactly what it says on the tin and is a great way to get a unique perspective on the River City. Mt Coot-tha’s also a staple, with some of the best sunrise and sunset views in Brisbane. At night watch the city lights and star-lit skies transform before you.
+	</div>
+  </div>
+
+ </div>
+</body>
+</html>
