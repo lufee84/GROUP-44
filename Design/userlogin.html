@@ -1,0 +1,82 @@
+<?php 
+session_start();   
+try{
+// connect to mysql
+$connect = new PDO('mysql:host=localhost;dbname=register', 'userregister', '123456');
+ } catch (PDOException $exc) {
+		echo $exc->getMessage();
+		exit();
+    }
+	$fill = array();
+    $fill['useremail']='';
+    try{
+      session_start();
+    if (isset($_POST['login'])) {
+      $username = $_POST['username'];
+      $password = md5($_POST['password']);
+
+      $select = $connect->prepare("SELECT * FROM userdata WHERE username='$username' and password='$password'");
+      $select->setFetchMode(PDO::FETCH_ASSOC);
+
+      $select ->execute();
+      $data = $select-> fetch();
+
+      if($data['username']!=$username and $data['password']!=$password)
+      {
+        echo"<br>invalid email or pass";
+      }
+
+      else if($data['username']==$username and $data['password']==$password)
+      {
+       $_SESSION['username']=$data['username'];
+       
+      header("Location: login_success.php");
+
+
+      }
+    }
+    else{
+
+    }
+
+  }catch(PDOException $e){
+  die('connection fails'.$e -> getMessage());
+  }
+
+ ?>  
+<head>
+  <title>Log in</title>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+<body>
+<div class="header">
+    <h1>Log in</h1>
+</div>
+<?php  
+if(isset($message))  
+{  
+echo '<label class="text-danger">'.$message.'</label>';  
+}  
+?>
+<form method="POST" action="">
+  <table>
+     <tr>
+           <td>Username : </td>
+           <td><input type="text" name="username" class="textInput" required pattern =".{5,}" title="Five or more characters"</td>
+     </tr>
+      <tr>
+           <td>Password : </td>
+           <td><input type="password" name="password" class="textInput" required pattern =".{6,}" title ="Six or more characters"></td>
+     </tr>
+	 <tr>
+			<A Href="UserRegistration.php"> No account? Create one!</A>
+	</tr>
+      <tr>
+           <td></td>
+           <td><input type="submit" name="login" value="Login"></td>
+     </tr>
+  
+</table>
+</form>
+</body>
+</html>

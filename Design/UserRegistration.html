@@ -1,0 +1,111 @@
+<?php
+session_start();
+   try{
+        // connect to mysql
+      $pdo = new PDO('mysql:host=localhost;dbname=register', 'userregister', '123456');
+    } catch (PDOException $exc) {
+        echo $exc->getMessage();
+        exit();
+    }
+if(isset($_POST['submit_button'])){
+    
+    $username = !empty($_POST['username']) ? trim($_POST['username']) : null;
+    $password = !empty($_POST['password']) ? trim($_POST['password']) : null;
+    $email = !empty($_POST['email']) ? trim($_POST['email']) : null;
+	$firstname = !empty($_POST['firstname']) ? trim($_POST['firstname']) : null;
+	$lastname = !empty($_POST['lastname']) ? trim($_POST['lastname']) : null;
+	$mno = !empty($_POST['mno']) ? trim($_POST['mno']) : null;
+	$mno = !empty($_POST['dob']) ? trim($_POST['dob']) : null;
+    $sql = "SELECT COUNT(username) AS num FROM userdata WHERE username = :username";
+    $stmt = $pdo->prepare($sql);
+
+    $stmt->bindValue(':username', $username);
+    
+    $stmt->execute();
+    
+
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if($row['num'] > 0){
+        die ('That username already exists!');
+    }
+    
+    $passwordHash = md5($_POST['password']);
+	$email=$_POST['email'];
+	$firstname=$_POST['firstname'];
+	$lastname=$_POST['lastname'];
+	$mno=$_POST['mno'];
+	$dob=$_POST['dob'];
+	
+	
+    $sql = "INSERT INTO userdata (username, password,firstname,lastname,dob,mno,email) VALUES (:username, :password, :firstname,:lastname,:dob,:mno,:email)";
+    $stmt = $pdo->prepare($sql);
+    
+
+    $stmt->bindValue(':username', $username);
+    $stmt->bindValue(':password', $passwordHash);
+	$stmt->bindValue(':email', $email);
+	$stmt->bindValue(':firstname', $firstname);
+	$stmt->bindValue(':lastname', $lastname);
+	$stmt->bindValue(':dob', $dob);
+	$stmt->bindValue(':mno', $mno);
+ 
+    $result = $stmt->execute();
+    
+    if($result){
+        header("Location: userlogin.php");
+    }
+    
+}
+
+?>
+
+<html>
+<head>
+<title>Register</title>
+<link rel="stylesheet" type ="text/css" href="style.css"/>
+</head>
+<body >
+	<div class ="header">
+		<h1> Create an account</h1>
+	</div>
+
+<form action="UserRegistration.php" name="UserRegistration" method="post" >
+<table>
+ <tr>
+ <td>User name:</td>
+ <td><input type ="text" name = "username"  class = "textIput" required pattern =".{5,}" title="Five or more characters" ></td>
+ </tr>
+ <tr>
+ <td>First name:</td>
+ <td><input type ="text" name = "firstname" class = "textIput" required pattern = "^[a-zA-Z]+" title ="Must be alphabetic"></td>
+ </tr>
+ <tr>
+ <td>Last name:</td>
+ <td><input type ="text" name = "lastname" class = "textIput" required pattern = "^[a-zA-Z]+" title ="Must be alphabetic"></td>
+ </tr>
+  <tr>
+ <td>Date of birth:</td>
+ <td><input type ="date" name = "dob" class = "textIput" required ></td>
+ </tr>
+  <tr>
+   <tr>
+ <td>Mobile number:</td>
+ <td><input type ="tel" name = "mno" class = "textIput"  required pattern= "\d{0,10}" title="Must be numeric and 10 digits"></td>
+ </tr>
+  <tr>
+ <td>Email:</td>
+ <td><input type ="email" name = "email" class = "textIput" required pattern ="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"></td>
+ </tr>
+  <tr>
+ <td>Password:</td>
+ <td><input type ="password" name = "password" class = "textIput" required pattern =".{6,}" title ="Six or more characters"></td>
+ </tr>
+  <tr>
+ <td></td>
+ <td><input type ="submit" value ="Submit" name = "submit_button" class = "Register" "></td>
+ </tr>
+ </table>
+ </form>
+</body>
+</html>
