@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<title>Dropdown Searchcar</title>
+<head>
+<link href="stylesheet.css" rel="stylesheet" type="text/css"/>
+<script language="javascript">
+function ChangeDisabled(value){
+	if(value=='true'){
+		document.getElementById('TetstText').disabled=false;
+	}else{
+		document.getElementById('TetstText').disabled=true;
+　}
+}
+</script>
+<style type="text/css">
+#sitebody{
+　width:600px;
+　margin:0 auto;
+　font-size:13px;
+}
+#header{
+　background-color:#FFD4D4;
+　height:80px;
+　text-align:center;
+　line-height:80px;
+}
+#sidebar_left{
+　background-color:#FFECC9;
+　width:120px;
+　height:400px;
+　text-align:center;
+　line-height:400px;
+　float:left;
+}
+#sidebar_right{
+　background-color:#FFECC9;
+　width:120px;
+　height:400px;
+　text-align:center;
+　line-height:400px;
+　float:right;
+}
+#content{
+　margin-left:120px;
+　margin-right:120px;
+　height:400px;
+　background-color:#F2FFF2;
+　text-align:center;
+　line-height:400px;
+}
+#footer{
+　clear:both;
+　background-color:#FFD4D4;
+　height:80px;
+　text-align:center;
+　line-height:80px;
+}
+</style>
+</head>
+<body>
+<div class= 'header'>
+			<div class= 'titleDiv'>
+				<!--<img src = "characters.jpg" alt="" class= "logo"/>-->
+					<h1> Smart City	</h1>
+			</div>
+			<div class ="navigation">
+
+			</div>
+			<code>
+			 <div id="cssmenu">
+			  <ul>
+			   <li class="active">
+			    <a href="Mockup_mainpage.html">Homepage</a>
+				 </li>
+				  <li>
+  				<a href="#">Profile</a>
+  			 </li>
+				 <li class="has-sub">
+ 					<a href="buyproducts.html">
+ 						Accommodation
+ 					</a>
+ 					<ul>
+ 						<!--<li class="has-sub">-->
+ 							<a href="#">
+ 							Buget rooms
+ 							</a>
+ 							<!--<ul>
+ 								<li>
+ 									<a href="buyproducts1-1.html">A-M</a>
+ 								</li>
+ 								<li>
+ 									<a href="buyproducts1-2.html">N-Z</a>
+ 								</li>
+ 							</ul>-->
+ 						<!--</li>-->
+ 						<!--<li class="has-sub">-->
+ 							<a href="#">
+ 								Shared rooms
+ 							</a>
+ 							<!--<ul>
+ 								<li>
+ 									<a href="buyproducts2-1.html">T-Shirt</a>
+ 								</li>
+ 								<li>
+ 									<a href="buyproducts2-2.html">Others</a>
+ 								</li>
+ 							</ul>-->
+ 						<!--</li>-->
+						<a href="#">
+							Ensuite
+						</a>
+ 					</ul>
+ 				</li>
+ 				<li>
+ 					<a href="Transport page.html">Search Page</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">Log out</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">About</a>
+ 				</li>
+ 				<li>
+ 					<a href="#">Contact</a>
+ 				</li>
+ 				</ul>
+			 </div>
+			</code>
+</div>
+<fieldset style="color:blue;margin-left: 40px;">
+	 <!--Accommodation:--><select name="q1" value="" class="Bolder" placeholder="Accommodation">
+		<option value="bugetRooms" class="Bolder">Accommodation</option>
+		<option value="bugetRooms" class="Bolder">Buget rooms</option>
+		<option value="sharedRooms" class="Bolder">Shared rooms</option>
+		<option value="ensuite" class="Bolder">Ensuite</option>
+	 </select>
+	 <!--Transport:--><select name="q2" value="" class="Bolder" placeholder="Transport">
+		<option value="bugetRooms" class="Bolder">Transport</option>
+		<option value="bugetRooms" class="Bolder">Train</option>
+		<option value="sharedRooms" class="Bolder">Car</option>
+		<option value="ensuite" class="Bolder">Walk</option>
+	 </select>
+	 <!--Shops and Malls:--><select name="q3" value="" class="Bolder" placeholder="Shops and Malls">
+		<option value="bugetRooms" class="Bolder">Shops and Malls</option>
+		<option value="bugetRooms" class="Bolder">Shops</option>
+		<option value="sharedRooms" class="Bolder">Malls</option>
+		<option value="ensuite" class="Bolder">Market</option>
+	 </select>
+	 <!--Insurance and help:--><select name="q4" value="" class="Bolder" placeholder="Insurance and help">
+		<option value="bugetRooms" class="Bolder">Insurance and help</option>
+		<option value="bugetRooms" class="Bolder">Insurance</option>
+		<option value="sharedRooms" class="Bolder">Help</option>
+		<option value="ensuite" class="Bolder">Others</option>
+	 </select>
+	 <input type="search" name="" value="" placeholder="search">
+	 <input type="submit" name="" value="submit">
+	 <br>
+</fieldset>
+
+<!--<br>
+<br>-->
+<br>
+
+<fieldset style="color:blue;margin-left: 40px;">
+	<table>
+		 <tr>
+			<td>
+				<table style="color: green;">
+					<tr>
+						<td><a href="http://ahmoshc.com/english.aspx"><img src="pictures/AHM OSHC (1).jpg" alt="" width="200" height="125"></a></td>
+						<td><p><h3>ahm OSHC</h3>
+						As you're planning to set off on one of the biggest adventures of your life, there is plenty to organise. But before you can even apply for your Australian Student visa, you will need to arrange some Overseas Student Health Cover (OSHC) to help you pay for hospital and medical costs while you are here.
+						You've come to the right place. You can research and apply for your OSHC online, right here. Once you have applied, you can download an official ahm OSHC certificate to use for your visa application.
+						Plus, to help you make the most of your time in Australia, we are working with a range of partners to offer services tailored for overseas students like banking, mobile phones, accommodation and much more.</p></td>
+					</tr>
+					<tr>
+						<td><a href="https://www.medibank.com.au/health-insurance/?gclid=Cj0KCQjwvuDPBRDnARIsAGhuAmbayg_bpHdw2urk-5aroDZOG0v4U-WEgv2c2d1dBxXeHManIr8zAxwaAqKWEALw_wcB&gclsrc=aw.ds"><img src="pictures/c216327fa9cb533f1fd3d8c98184a366_09427cef8560411a7f28cde525dd19dd422c9d8bbb780a22e3b1d04053d6c57d.png" alt="" width="200" height="200"></a></td>
+						<td><p><h3>medibank</h3>
+						Health insurance. At Medibank, we're all about Better Health. Better health for individuals, couples and families that’s easy to understand.
+						Good health tops everything. So when it comes to looking after your (or your family’s) health, you want choice over when and where you’re treated. Then there are the lifestyle benefits that come with having cover for extras like dental, optical and physio.
+						Because even if you’re healthy, we’ll give you the support you need to stay at the top of your game, including discounted gym passes.</p></td>
+					</tr>
+					<tr>
+						<td><a href="https://www.allianz.com.au/"><img src="pictures/logoentwicklung_1999.jpg" alt="" width="246" height="160"></a></td>
+						<td><p><h3>Allianz</h3>
+						Allianz offers a wide range of insurance and fund products to over 86 million customers in more than 70 countries.
+						Our retail and corporate clients enjoy an extensive product selection in all insurance business lines, designed to protect them against any risks. We are one of the leading property and casualty insurers and are among the top five companies in life and health insurance.
+						Most markets are served by local Allianz companies; in addition, there are also business areas with a global reach, for example the insurance of global corporate customers, credit insurance, assistance services and re-insurance.</p></td>
+					</tr>
+				</table>
+			</td>
+			<td style="text-align:center;"  width="100">
+				<!--<div class="" align="right" style="table, th, td {border: 1px solid black;}">
+					<a href="#">All you need to know</a>
+					<table>
+						<tr>
+							<td>
+								Insurance is a means of protection from financial loss. It is a form of risk management primarily used to hedge against the risk of a contingent, uncertain loss.
+								An entity which provides insurance is known as an insurer, insurance company, or insurance carrier. A person or entity who buys insurance is known as an insured or policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and must involve something in which the insured has an insurable interest established by ownership, possession, or preexisting relationship.
+								The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insured will be financially compensated. The amount of money charged by the insurer to the insured for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster.
+							</td>
+						</tr>
+					</table>
+				</div>-->
+				<a href="https://en.wikipedia.org/wiki/Insurance" style="text-align:center;">All you need to know</a>
+				<fieldset style="text-align:center; color:black;">
+					Insurance is a means of protection from financial loss. It is a form of risk management primarily used to hedge against the risk of a contingent, uncertain loss.
+					An entity which provides insurance is known as an insurer, insurance company, or insurance carrier. A person or entity who buys insurance is known as an insured or policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and must involve something in which the insured has an insurable interest established by ownership, possession, or preexisting relationship.
+					The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insured will be financially compensated. The amount of money charged by the insurer to the insured for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster.
+					<br><br><img src="pictures/330621433db678c1e2f27f400b7eecc7.png" alt="" style="text-align:center;" width="308" height="229"><!--width="130" height="130"-->
+				</fieldset>
+			</td>
+		 </tr>
+	</table>
+	<!--<table>
+		<tr>
+			<td><a href="http://ahmoshc.com/english.aspx"><img src="AHM OSHC (1).jpg" alt="" width="200" height="125"></a></td>
+			<td>
+
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="https://www.medibank.com.au/health-insurance/?gclid=Cj0KCQjwvuDPBRDnARIsAGhuAmbayg_bpHdw2urk-5aroDZOG0v4U-WEgv2c2d1dBxXeHManIr8zAxwaAqKWEALw_wcB&gclsrc=aw.ds"><img src="c216327fa9cb533f1fd3d8c98184a366_09427cef8560411a7f28cde525dd19dd422c9d8bbb780a22e3b1d04053d6c57d.png" alt="" width="200" height="200"></a>
+			</td>
+			<td>
+
+			</td>
+		</tr>
+		<tr>
+			<td><a href="https://www.allianz.com.au/"><img src="logoentwicklung_1999.jpg" alt="" width="246" height="160"></a></td>
+			<td>
+
+			</td>
+		</tr>
+	</table>-->
+　<!--<div id="sidebar_left">
+  </div>
+　<div id="sidebar_right">sidebar_right</div>
+　<div id="content">
+
+	</div>
+</div>-->
+	<!--<div class="" align="left">
+
+	</div>
+	<div class="" align="center" width="">
+
+	</div>
+	<div class="" align="left">
+
+	</div>
+	<div class="" align="left">
+
+	</div>-->
+	<!--<div class="" align="right" style="table, th, td {border: 1px solid black;}">
+		<a href="#">All you need to know</a>
+		<table>
+			<tr>
+				<td>
+					Insurance is a means of protection from financial loss. It is a form of risk management primarily used to hedge against the risk of a contingent, uncertain loss.
+					An entity which provides insurance is known as an insurer, insurance company, or insurance carrier. A person or entity who buys insurance is known as an insured or policyholder. The insurance transaction involves the insured assuming a guaranteed and known relatively small loss in the form of payment to the insurer in exchange for the insurer's promise to compensate the insured in the event of a covered loss. The loss may or may not be financial, but it must be reducible to financial terms, and must involve something in which the insured has an insurable interest established by ownership, possession, or preexisting relationship.
+					The insured receives a contract, called the insurance policy, which details the conditions and circumstances under which the insured will be financially compensated. The amount of money charged by the insurer to the insured for the coverage set forth in the insurance policy is called the premium. If the insured experiences a loss which is potentially covered by the insurance policy, the insured submits a claim to the insurer for processing by a claims adjuster.
+				</td>
+			</tr>
+		</table>
+	</div>-->
+	<!--&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-->
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="button" name="" value="next page→"　style="margin-left:500px" align="center">
+
+</fieldset>
+</body>
+<footer class="page_footer">
+ <img src = "characters.jpg" alt="" class= "logo"/>
+  <h1> Smart City	</h1>
+		  &copy; SMCity.com
+</footer>
+<html>
